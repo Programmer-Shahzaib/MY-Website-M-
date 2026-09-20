@@ -7,19 +7,30 @@ let messages = [
     "Think again please 🥺",
     "Come on, give it another thought 💗",
     "I don't think that's the right answer 😭",
+    "Wait... are you really saying no? 😳",
+    "Please don't do this to me 🥹",
+    "Just think about it one more time 💕",
+    "Are you absolutely sure? 👀",
+    "Maybe you should reconsider 😭❤️",
+    "Nooo, try again! 🥺💗",
+    "I know you don't really mean that 😭",
+    "Come on, you can change your mind 💖",
+    "Give it another chance? 🥹",
+    "The button is asking you to reconsider 😂❤️",
+    "Okay... but are you REALLY sure? 😭"
 ];
 
-btnNo.addEventListener("mouseover", () => {
-    let maxX = window.innerWidth <= 500 ? 80 : 200;
-    let maxY = window.innerWidth <= 500 ? 80 : 200;
+// btnNo.addEventListener("mouseover", () => {
+//     let maxX = window.innerWidth <= 500 ? 80 : 200;
+//     let maxY = window.innerWidth <= 500 ? 80 : 200;
 
-    let x = Math.random() * maxX - maxX / 2;
-    let y = Math.random() * maxY - maxY / 2;
+//     let x = Math.random() * maxX - maxX / 2;
+//     let y = Math.random() * maxY - maxY / 2;
 
-    btnNo.style.position = "relative";
-    btnNo.style.left = x + "px";
-    btnNo.style.top = y + "px";
-});
+//     btnNo.style.position = "relative";
+//     btnNo.style.left = x + "px";
+//     btnNo.style.top = y + "px";
+// });
 
 btnNo.addEventListener("click", () => {
     let randomNumber = Math.floor(Math.random() * messages.length);
