@@ -20,17 +20,17 @@ let messages = [
     "Okay... but are you REALLY sure? 😭"
 ];
 
-// btnNo.addEventListener("mouseover", () => {
-//     let maxX = window.innerWidth <= 500 ? 80 : 200;
-//     let maxY = window.innerWidth <= 500 ? 80 : 200;
+btnNo.addEventListener("mouseover", () => {
+    let maxX = window.innerWidth <= 500 ? 80 : 200;
+    let maxY = window.innerWidth <= 500 ? 80 : 200;
 
-//     let x = Math.random() * maxX - maxX / 2;
-//     let y = Math.random() * maxY - maxY / 2;
+    let x = Math.random() * maxX - maxX / 2;
+    let y = Math.random() * maxY - maxY / 2;
 
-//     btnNo.style.position = "relative";
-//     btnNo.style.left = x + "px";
-//     btnNo.style.top = y + "px";
-// });
+    btnNo.style.position = "relative";
+    btnNo.style.left = x + "px";
+    btnNo.style.top = y + "px";
+});
 
 btnNo.addEventListener("click", () => {
     let randomNumber = Math.floor(Math.random() * messages.length);
