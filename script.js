@@ -21,11 +21,11 @@ let messages = [
 ];
 
 btnNo.addEventListener("mouseover", () => {
-    let maxX = window.innerWidth <= 500 ? 80 : 200;
-    let maxY = window.innerWidth <= 500 ? 80 : 200;
+    let maxX = window.innerWidth <= 700 ? 140 : 250;
+    let maxY = window.innerWidth <= 700 ? 140 : 250;
 
-    let x = Math.random() * maxX - maxX / 2;
-    let y = Math.random() * maxY - maxY / 2;
+    let x = Math.random() * maxX - maxX / 8;
+    let y = Math.random() * maxY - maxY / 8;
 
     btnNo.style.position = "relative";
     btnNo.style.left = x + "px";
