@@ -19,17 +19,33 @@ let messages = [
     "The button is asking you to reconsider 😂❤️",
     "Okay... but are you REALLY sure? 😭"
 ];
+let canMove = true;
 
-btnNo.addEventListener("mouseover", () => {
-    let maxX = window.innerWidth <= 700 ? 140 : 250;
-    let maxY = window.innerWidth <= 700 ? 140 : 250;
+document.addEventListener("mousemove", (e) => {
+    let rect = btnNo.getBoundingClientRect();
 
-    let x = Math.random() * maxX - maxX / 8;
-    let y = Math.random() * maxY - maxY / 8;
+    let distanceX = e.clientX - (rect.left + rect.width / 2);
+    let distanceY = e.clientY - (rect.top + rect.height / 2);
 
-    btnNo.style.position = "relative";
-    btnNo.style.left = x + "px";
-    btnNo.style.top = y + "px";
+    let distance = Math.sqrt(distanceX ** 2 + distanceY ** 2);
+
+    if (distance < 70 && canMove) {
+        canMove = false;
+
+        let maxX = window.innerWidth <= 700 ? 150 : 300;
+        let maxY = window.innerWidth <= 700 ? 150 : 300;
+
+        let x = Math.random() * maxX - maxX / 2;
+        let y = Math.random() * maxY - maxY / 2;
+
+        btnNo.style.position = "relative";
+        btnNo.style.left = x + "px";
+        btnNo.style.top = y + "px";
+
+        setTimeout(() => {
+            canMove = true;
+        }, 300);
+    }
 });
 
 btnNo.addEventListener("click", () => {
